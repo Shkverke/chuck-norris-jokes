@@ -1,0 +1,12 @@
+<span *ngFor="let category of categories" (click)="categoryClick(category)"
+  >{{ category }}
+</span>
+
+<p>{{ joke?.value }}</p>
+
+<input #search type="text" />
+<button (click)="findJoke(search.value)">Search Joke</button>
+
+<p *ngFor="let joke of jokes">
+  {{ joke.value }}
+</p>
