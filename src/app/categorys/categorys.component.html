@@ -1,5 +1,5 @@
 <span *ngFor="let category of categories" (click)="categoryClick(category)"
-  >{{ category }}
+  >{{ category | titlecase }}
 </span>
 
 <p>{{ joke?.value }}</p>
@@ -7,6 +7,7 @@
 <input #search type="text" />
 <button (click)="findJoke(search.value)">Search Joke</button>
 
-<p *ngFor="let joke of jokes">
-  {{ joke.value }}
-</p>
+<div *ngFor="let joke of jokes">
+  <p appStyle>{{ joke.value }}</p>
+  <p>{{ joke.created_at | date }}</p>
+</div>

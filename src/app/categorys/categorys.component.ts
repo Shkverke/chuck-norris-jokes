@@ -30,9 +30,8 @@ export class CategorysComponent implements OnInit {
     if (query.length > 2 && query.length < 121) {
       this.jokesService.searchJoke(query).subscribe(({ result }) => {
         this.jokes = result;
-        console.log(query);
+        console.log(result);
       });
     }
   }
-
 }
