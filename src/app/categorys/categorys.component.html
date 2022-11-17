@@ -1,5 +1,5 @@
 <span *ngFor="let category of categories" (click)="categoryClick(category)"
-  >{{ category | titlecase }}
+  >{{ category | pipe }}
 </span>
 
 <p>{{ joke?.value }}</p>
